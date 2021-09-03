@@ -60,7 +60,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: "Choose a license for your project.",
-        choices: ['Apache License 2.0', 'MIT License', ' ISC License', ' CC-BY-4.0', 'CC-BY-SA-4.0 ', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['Apache License 2.0', 'MIT License', 'ISC License', ' CC-BY-4.0', 'CC-BY-SA-4.0 ', 'Boost Software License 1.0', 'The Unlicense'],
     },
     {
         type: 'input',

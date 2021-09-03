@@ -20,9 +20,8 @@ function generate(Data) {
 
 
   
-  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${Data.username}/${Data.repo}?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${Data.username}/${Data.repo}?style=flat&logo=appveyor)
   
-  Check out the badges hosted by [shields.io](https://shields.io/).
+  
   `
   let installation= `
   ## Installation
@@ -41,10 +40,17 @@ function generate(Data) {
   ## Test
   ${Data.tests}
   `
-
+  let badges = `
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${Data.username}/${Data.repo}?style=flat&logo=appveyor) 
+  ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${Data.username}/${Data.repo}?style=flat&logo=appveyor)
+  ![Badge for GitHub last commit](https://img.shields.io/bitbucket/issues/${Data.username}/${Data.repo}?style=flat&logo=appveyor)
+  ![Badge for GitHub last commit](https://img.shields.io/apm/l/${Data.license.replace(/\s/g, "")}?style=flat&logo=appveyor)
+  
+  `
   Page += Table;
   Page += installation;
   Page += license;
+  Page += badges;
   Page += feature;
   Page += test;
   return Page;
