@@ -1,3 +1,5 @@
+const { clear } = require("console");
+
 function generate(Data) {
 
   
@@ -15,38 +17,37 @@ function generate(Data) {
   `# ${Data.title}
   ## Description 
   ${Data.description}
-  `
-  Page += Table;
-  Page += `
-  * [License](#license)`;
-  if (Data.installation !== '') {
+
+
   
-  Page +=
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${Data.username}/${Data.repo}?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${Data.username}/${Data.repo}?style=flat&logo=appveyor)
+  
+  Check out the badges hosted by [shields.io](https://shields.io/).
   `
+  let installation= `
   ## Installation
-  *What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.*
-  ${Data.installation}`
-  };
-  // Optional Contributing section
-  if (Data.contributing !== '') {
+  *Provide a step-by-step description of how to get the development environment running.
+  ${Data.installation}
   `
-  ## Contributing  
-  ${Data.contributing}`
-  };
-  if (Data.tests !== '') {
-  Page +=
-  `
-  ## Tests
-  *Tests for application and how to run them:*
-  ${Data.tests}`
-  };
-  Page +=
-  `
+  let license = `
   ## License
-  ${Data.license}
-  `;
+  ${Data.license};
+  `
+  let feature = `
+  ## Features
+  ${Data.feature}
+  `
+  let test = `
+  ## Test
+  ${Data.tests}
+  `
+
+  Page += Table;
+  Page += installation;
+  Page += license;
+  Page += feature;
+  Page += test;
   return Page;
-  
 }
 
 module.exports = generate;

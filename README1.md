@@ -1,17 +1,26 @@
-# ekmfm
+# Readme generator
   ## Description 
-  fmee
+  A helpful tool that allows users to create a professinal read me 
+
+
+  
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/abjj1999/readme-generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/abjj1999/readme-generator?style=flat&logo=appveyor)
+  
+  Check out the badges hosted by [shields.io](https://shields.io/).
   ## Table of Contents
   * [Installation](#installation)
   * [Contributing](#contributing)
   * [Tests](#tests)
-  * [License](#license)
   ## Installation
-  *What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.*
-  fmfm
-  ## Tests
-  *Tests for application and how to run them:*
-  dsfm
+  *Provide a step-by-step description of how to get the development environment running.
+  ds
+  
   ## License
-  GNU AGPLv3
+  Apache License 2.0;
+  
+  ## Features
+  no feature
+  
+  ## Test
+  no
   

@@ -54,24 +54,25 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: "If applicable, describe the steps required to install your project for the Installation section.",
-    },
-    {
-        type: 'input',
-        name: 'contributing',
-        message: "If applicable, provide guidelines on how other developers can contribute to your project.",
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
+        message: "Provide a step-by-step description of how to get the development environment running.",
     },
     {
         type: 'list',
         name: 'license',
         message: "Choose a license for your project.",
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-    }
+        choices: ['Apache License 2.0', 'MIT License', ' ISC License', ' CC-BY-4.0', 'CC-BY-SA-4.0 ', 'Boost Software License 1.0', 'The Unlicense'],
+    },
+    {
+        type: 'input',
+        name: 'feature',
+        message: 'List a feature.'
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: "Provide any tests written for your application and provide examples on how to run them.",
+    },
+
 ];
 
 // TODO: Create a function to write README file
