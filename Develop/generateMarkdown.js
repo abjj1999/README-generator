@@ -1,110 +1,52 @@
-function generateMarkdown(userResponses) {
+function generate(Data) {
 
-  // Generate Table of Contents conditionally based on userResponses
-  let draftToC = `## Table of Contents`;
+  
+  let Table = `## Table of Contents`;
 
-  if (userResponses.installation !== '') { draftToC += `
+  if (Data.installation !== '') { Table += `
   * [Installation](#installation)` };
 
-  if (userResponses.usage !== '') { draftToC += `
-  * [Usage](#usage)` };
-
-  if (userResponses.contributing !== '') { draftToC += `
+  if (Data.contributing !== '') { Table += `
   * [Contributing](#contributing)` };
 
-  if (userResponses.tests !== '') { draftToC += `
+  if (Data.tests !== '') { Table += `
   * [Tests](#tests)` };
-
-
-  // Generate markdown for the top required portions of the README
-  let draftMarkdown = 
-  `# ${userResponses.title}
-  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor)
-  
-  Check out the badges hosted by [shields.io](https://shields.io/).
-  
-  
+  let Page = 
+  `# ${Data.title}
   ## Description 
-  
-  *The what, why, and how:* 
-  
-  ${userResponses.description}
+  ${Data.description}
   `
-
-  // Add Table of Contents to markdown
-  draftMarkdown += draftToC;
- 
-  // Add License section since License is required to Table of Contents
-  draftMarkdown += `
+  Page += Table;
+  Page += `
   * [License](#license)`;
+  if (Data.installation !== '') {
   
-
-  // Optional Installation section
-  if (userResponses.installation !== '') {
-  
-  draftMarkdown +=
+  Page +=
   `
-  
   ## Installation
-  
-  *Steps required to install project and how to get the development environment running:*
-  
-  ${userResponses.installation}`
+  *What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.*
+  ${Data.installation}`
   };
-  
-
-  // Optional Usage section
-  if (userResponses.usage !== '') {
-  
-  draftMarkdown +=
-  
-  `
-  
-  ## Usage 
-  
-  *Instructions and examples for use:*
-  
-  ${userResponses.usage}`
-  };
-  
-  
   // Optional Contributing section
-  if (userResponses.contributing !== '') {
+  if (Data.contributing !== '') {
   `
-  
-  ## Contributing
-  
-  *If you would like to contribute it, you can follow these guidelines for how to do so.*
-  
-  ${userResponses.contributing}`
+  ## Contributing  
+  ${Data.contributing}`
   };
-  
-
-  // Optional Tests section
-  if (userResponses.tests !== '') {
-  
-  draftMarkdown +=
+  if (Data.tests !== '') {
+  Page +=
   `
-  
   ## Tests
-  
   *Tests for application and how to run them:*
-  
-  ${userResponses.tests}`
+  ${Data.tests}`
   };
-
-
-  // License section is required
-  draftMarkdown +=
+  Page +=
   `
-  
   ## License
-  
-  ${userResponses.license}
+  ${Data.license}
   `;
-  // Return markdown
-  return draftMarkdown;
+  return Page;
   
 }
 
-module.exports = generateMarkdown;
+module.exports = generate;
