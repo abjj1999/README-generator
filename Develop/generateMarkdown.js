@@ -43,8 +43,7 @@ function generate(Data) {
   let badges = `
   ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${Data.username}/${Data.repo}?style=flat&logo=appveyor) 
   ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${Data.username}/${Data.repo}?style=flat&logo=appveyor)
-  ![Badge for GitHub last commit](https://img.shields.io/bitbucket/issues/${Data.username}/${Data.repo}?style=flat&logo=appveyor)
-  ![Badge for GitHub last commit](https://img.shields.io/apm/l/${Data.license.replace(/\s/g, "")}?style=flat&logo=appveyor)
+  ![Badge for GitHub last commit](https://img.shields.io/github/issues/abjj1999/readme-generator)
   
   `
   Page += Table;
