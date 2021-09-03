@@ -1,4 +1,4 @@
-const { clear } = require("console");
+
 
 function generate(Data) {
 
@@ -25,7 +25,7 @@ function generate(Data) {
   `
   let installation= `
   ## Installation
-  *Provide a step-by-step description of how to get the development environment running.
+  *Provide a step-by-step description of how to get the development environment running.*
   ${Data.installation}
   `
   let license = `
@@ -41,9 +41,10 @@ function generate(Data) {
   ${Data.tests}
   `
   let badges = `
+  ## Badges
   ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${Data.username}/${Data.repo}?style=flat&logo=appveyor) 
   ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${Data.username}/${Data.repo}?style=flat&logo=appveyor)
-  ![Badge for GitHub last commit](https://img.shields.io/github/issues/abjj1999/readme-generator)
+  ![Badge for GitHub last commit](https://img.shields.io/github/issues/${Data.username}/${Data.repo})
   
   `
   Page += Table;
